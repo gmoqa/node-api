@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-var game = require('./routes/game-route');
-var main = require('./routes/main-route');
-var review = require('./routes/review-route');
+const game = require('./routes/game-route');
+const main = require('./routes/main-route');
+const review = require('./routes/review-route');
 
 router.use('/', main)
 router.use('/games', game);
