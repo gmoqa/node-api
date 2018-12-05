@@ -1,3 +1,3 @@
 exports.index = (req, res) => {
-    res.send('NOT IMPLEMENTED: Review List');
-};
+    res.send('NOT IMPLEMENTED: Review List')
+}
