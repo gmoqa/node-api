@@ -1,3 +1,3 @@
 exports.index = (req, res) => {
-    res.send('hello! API')
-};
+	res.send('hello! API')
+}

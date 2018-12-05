@@ -1,4 +1,5 @@
-const router = require('express').Router()
+const express = require('express')
+const router = express.Router()
 
 const defaultRoutes = require('./default-route')
 const gameRoutes = require('./game-route')
