@@ -2,6 +2,6 @@ const express = require('express')
 const router = express.Router()
 const gameController = require('../controllers/game-controller')
 
-router.get('/', gameController.index);
+router.get('/', gameController.index)
 
-module.exports = router;
+module.exports = router
