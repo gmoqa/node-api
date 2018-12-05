@@ -1,8 +1,6 @@
-const express = require('express')
-const router = express.Router()
+const router = require('express').Router()
+const controller = require('../controllers/review-controller')
 
-const reviewController = require('../controllers/review-controller')
-
-router.get('/', reviewController.index)
+router.get('/', controller.index)
 
 module.exports = router
