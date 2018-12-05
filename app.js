@@ -11,15 +11,19 @@ const PORT = config.port
 const HOST = config.host
 
 const app = express()
-app.use(compression())
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 if (process.env.ENV === 'dev') {
 	app.use(require('morgan')('dev'))
+	app.use(errorHandler())
 }
-app.use(errorHandler())
+
+if (process.env.ENV === 'prod') {
+	app.use(require('express-status-monitor')())
+	app.use(compression())
+}
 
 app.use('/', router)
 
