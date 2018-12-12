@@ -6,10 +6,6 @@ const bodyParser = require('body-parser')
 const errorHandler = require('errorhandler')
 
 const router = require('./src/routes')
-const config = require('./config')
-
-const PORT = config.port
-const HOST = config.host
 
 const app = express()
 
@@ -26,8 +22,4 @@ if (process.env.ENV === 'dev') {
 
 app.use('/', router)
 
-app.listen(PORT, HOST, () => {
-	if (process.env.ENV === 'dev') {
-		console.log(`http://${PORT}:${HOST}`)
-	}
-})
+module.exports = app
